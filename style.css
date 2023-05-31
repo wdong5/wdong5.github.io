@@ -29,14 +29,14 @@ p {
     position: absolute;
     left: 260px;
     width: 900px;
-    padding-bottom: 30px;
+    padding-bottom: 0px;
 }
 
 #name_chn {
     position: absolute;
     /* left:829px; */
     left: 0px;
-    top: 75px;
+    top: 25px;
     width: 200px;
     height: 200px;
     background: transparent url(./img/name.png) no-repeat;
