@@ -15,18 +15,6 @@ body {
     /* height: 2000px; */
 }
 
-.image-container {
-  display: flex;
-  justify-content: center; /* This will center the image horizontally */
-  align-items: center; /* This will center the image vertically */
-  height: 200px /*100%; Or any height you need to center the image within */
-}
-
-#head_photo {
-  max-height: 100%;
-}
-
-
 em {
     font-weight: bold;
     color: #87CEFA;
