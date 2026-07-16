@@ -224,6 +224,27 @@ h1 {
     clear: both;
 }
 
+#recent_news {
+    padding: 0px 10px 0px 10px;
+    width: 800px;
+}
+
+#recent_news h1 {
+    padding: 12px 0 8px 0;
+}
+
+.recent_news_roll {
+    max-height: 120px;
+    overflow-y: auto;
+    border-left: 4px solid #87CEFA;
+    padding: 6px 12px;
+    background-color: #f8fbfc;
+}
+
+.recent_news_roll p {
+    padding: 4px 0;
+}
+
 
 #ta_course {
     float: left;
