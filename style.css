@@ -42,6 +42,12 @@ body {
   font: 400 var(--step-0)/1.65 var(--font-sans);
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 a {
   color: var(--link);
   text-decoration-thickness: 0.08em;
@@ -108,7 +114,7 @@ h3 {
   top: 0;
   z-index: 5;
   border-bottom: 1px solid var(--border);
-  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  background: var(--surface);
   backdrop-filter: blur(10px);
 }
 
