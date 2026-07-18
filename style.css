@@ -480,6 +480,16 @@ h3 {
   border-radius: var(--radius-sm);
 }
 
+.additional-publications {
+  margin-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-4);
+}
+
+.additional-publications h3 {
+  margin-bottom: var(--space-3);
+}
+
 .publication {
   display: grid;
   grid-template-columns: 300px minmax(0, 1fr);
