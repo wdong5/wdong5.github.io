@@ -197,10 +197,10 @@ h3 {
 
 .hero-body {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(180px, 260px);
-  gap: clamp(1.4rem, 3vw, 2.4rem);
+  grid-template-columns: minmax(0, 1fr) minmax(210px, 250px);
+  gap: clamp(1.75rem, 4vw, 3.5rem);
   align-items: start;
-  margin-top: var(--space-3);
+  margin-top: var(--space-4);
 }
 
 .portrait-wrap {
@@ -248,8 +248,59 @@ h3 {
 
 .hero-content p {
   color: var(--color-text-secondary);
-  font-size: 1.02rem;
-  line-height: 1.65;
+  font-size: 1rem;
+  line-height: 1.62;
+}
+
+.expertise {
+  margin-bottom: var(--space-4);
+}
+
+.bio-label {
+  display: block;
+  margin: 0 0 var(--space-2);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.expertise-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.expertise-list li {
+  border: 1px solid #ead1c5;
+  border-radius: 999px;
+  background: #fff6f0;
+  color: var(--color-accent-hover);
+  padding: 0.4rem 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.bio-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.bio-details p {
+  margin-bottom: 0;
+  font-size: 0.92rem;
+  line-height: 1.58;
 }
 
 .link-row {
@@ -628,7 +679,12 @@ em {
 
   .portrait-wrap {
     order: -1;
-    max-width: 220px;
+    max-width: 190px;
+  }
+
+  .bio-details {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
   }
 
   .news-list li {

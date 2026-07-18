@@ -1,51 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" font-family="Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif">
-  <rect x="0" y="0" width="900" height="430" fill="#ffffff"/>
-
-  <text x="230" y="30" text-anchor="middle" font-size="18" fill="#1f1f1f" font-weight="700">Pack</text>
-  <text x="670" y="30" text-anchor="middle" font-size="18" fill="#1f1f1f" font-weight="700">Predictor</text>
-
-  <!-- ===== Panel 1: Pack ===== -->
-  <g>
-    <!-- rings -->
-    <polygon points="230,80 334.6,156 294.7,279 165.3,279 125.4,156" fill="none" stroke="#ddd6cc" stroke-width="1.2"/>
-    <polygon points="230,116.7 299.8,167.4 273.1,249.3 186.9,249.3 160.2,167.4" fill="none" stroke="#ddd6cc" stroke-width="1"/>
-    <polygon points="230,153.3 264.9,178.7 251.6,219.7 208.4,219.7 195.1,178.7" fill="none" stroke="#ddd6cc" stroke-width="1"/>
-    <!-- spokes -->
-    <path d="M230,190 L230,80 M230,190 L334.6,156 M230,190 L294.7,279 M230,190 L165.3,279 M230,190 L125.4,156" stroke="#ddd6cc" stroke-width="1"/>
-    <!-- baseline (avg of 6 agents) -->
-    <polygon points="230,102 266.6,178.1 275.3,252.3 181.5,256.75 193.4,178.1" fill="#766d65" fill-opacity="0.18" stroke="#766d65" stroke-width="1.5" stroke-dasharray="4 3"/>
-    <!-- SZ-Gen (ours) -->
-    <polygon points="230,85.5 324.1,159.4 289.5,271.9 171.8,270.1 130.6,157.7" fill="#d73f09" fill-opacity="0.28" stroke="#d73f09" stroke-width="2.2"/>
-    <!-- axis labels -->
-    <text x="230" y="55" text-anchor="middle" font-size="13" fill="#766d65">Comp.</text>
-    <text x="360" y="153" text-anchor="start" font-size="13" fill="#766d65">Iter.</text>
-    <text x="310" y="304" text-anchor="middle" font-size="13" fill="#766d65">Exec.</text>
-    <text x="150" y="304" text-anchor="middle" font-size="13" fill="#766d65">Corr.</text>
-    <text x="100" y="153" text-anchor="end" font-size="13" fill="#766d65">TP</text>
-  </g>
-
-  <!-- ===== Panel 2: Predictor ===== -->
-  <g>
-    <polygon points="670,80 774.6,156 734.7,279 605.3,279 565.4,156" fill="none" stroke="#ddd6cc" stroke-width="1.2"/>
-    <polygon points="670,116.7 739.8,167.4 713.1,249.3 626.9,249.3 600.2,167.4" fill="none" stroke="#ddd6cc" stroke-width="1"/>
-    <polygon points="670,153.3 704.9,178.7 691.6,219.7 648.4,219.7 635.1,178.7" fill="none" stroke="#ddd6cc" stroke-width="1"/>
-    <path d="M670,190 L670,80 M670,190 L774.6,156 M670,190 L734.7,279 M670,190 L605.3,279 M670,190 L565.4,156" stroke="#ddd6cc" stroke-width="1"/>
-    <!-- baseline -->
-    <polygon points="670,107.5 701.4,179.8 712.1,247.85 624.7,252.3 628.2,176.4" fill="#766d65" fill-opacity="0.18" stroke="#766d65" stroke-width="1.5" stroke-dasharray="4 3"/>
-    <!-- SZ-Gen (ours) -->
-    <polygon points="670,91 758.9,161.1 731.5,274.55 608.5,274.55 581.1,161.1" fill="#d73f09" fill-opacity="0.28" stroke="#d73f09" stroke-width="2.2"/>
-    <text x="670" y="55" text-anchor="middle" font-size="13" fill="#766d65">Comp.</text>
-    <text x="800" y="153" text-anchor="start" font-size="13" fill="#766d65">Iter.</text>
-    <text x="750" y="304" text-anchor="middle" font-size="13" fill="#766d65">Exec.</text>
-    <text x="590" y="304" text-anchor="middle" font-size="13" fill="#766d65">Corr.</text>
-    <text x="540" y="153" text-anchor="end" font-size="13" fill="#766d65">TP</text>
-  </g>
-
-  <!-- legend -->
-  <g>
-    <rect x="300" y="385" width="22" height="14" rx="3" fill="#d73f09" fill-opacity="0.28" stroke="#d73f09" stroke-width="2"/>
-    <text x="330" y="397" font-size="14" fill="#1f1f1f" font-weight="700">SZ-Gen (ours)</text>
-    <rect x="500" y="385" width="22" height="14" rx="3" fill="#766d65" fill-opacity="0.18" stroke="#766d65" stroke-width="1.5" stroke-dasharray="4 3"/>
-    <text x="530" y="397" font-size="14" fill="#766d65">Baseline agents</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" font-family="Inter,Arial,sans-serif">
+  <rect width="900" height="450" rx="18" fill="#fbfaf8"/>
+  <text x="48" y="54" font-size="19" font-weight="800" fill="#d73f09">SZ-GEN</text><text x="48" y="82" font-size="15" fill="#766d65">Multi-agent optimization across HPC architectures</text>
+  <g stroke="#ddd6cc" stroke-width="2" fill="#fff"><rect x="48" y="132" width="175" height="190" rx="12"/><rect x="270" y="132" width="175" height="190" rx="12"/><rect x="492" y="132" width="175" height="190" rx="12"/><rect x="714" y="132" width="138" height="190" rx="12"/></g>
+  <g fill="#1f1f1f" text-anchor="middle"><text x="135" y="170" font-size="17" font-weight="700">Translate</text><text x="357" y="170" font-size="17" font-weight="700">Profile</text><text x="579" y="170" font-size="17" font-weight="700">Optimize</text><text x="783" y="170" font-size="17" font-weight="700">Verify</text></g>
+  <g fill="#fff6f0" stroke="#d73f09" stroke-width="2"><path d="M91 211h88v64H91z"/><path d="m110 231 12 12-12 12m26 0h25"/><circle cx="357" cy="243" r="42"/><path d="M357 211v32l25 17"/><path d="M535 215h88v55h-88zM548 286h62"/><path d="m760 241 17 17 34-40" fill="none" stroke-width="7"/></g>
+  <g stroke="#d73f09" stroke-width="3" fill="none"><path d="M223 227h47"/><path d="m260 218 10 9-10 9"/><path d="M445 227h47"/><path d="m482 218 10 9-10 9"/><path d="M667 227h47"/><path d="m704 218 10 9-10 9"/></g>
+  <g font-size="14" text-anchor="middle" fill="#4d4742"><text x="135" y="302">LLM agents</text><text x="357" y="302">measure kernels</text><text x="579" y="302">iterative feedback</text><text x="783" y="302">correctness</text></g>
+  <g transform="translate(232 370)" font-size="15" font-weight="700"><rect x="0" width="124" height="36" rx="18" fill="#fff" stroke="#ddd6cc"/><text x="62" y="23" text-anchor="middle" fill="#4d4742">CUDA</text><rect x="148" width="124" height="36" rx="18" fill="#fff" stroke="#ddd6cc"/><text x="210" y="23" text-anchor="middle" fill="#4d4742">HIP</text><rect x="296" width="140" height="36" rx="18" fill="#fff" stroke="#ddd6cc"/><text x="366" y="23" text-anchor="middle" fill="#4d4742">Cerebras</text></g>
 </svg>
