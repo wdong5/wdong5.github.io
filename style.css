@@ -185,7 +185,7 @@ h3 {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 260px);
   gap: clamp(1.4rem, 3vw, 2.4rem);
   align-items: start;
   padding-bottom: var(--space-5);
@@ -195,6 +195,10 @@ h3 {
 .portrait-wrap {
   position: sticky;
   top: 5rem;
+}
+
+.portrait-wrap .eyebrow {
+  margin-top: var(--space-3);
 }
 
 .portrait {
@@ -264,28 +268,17 @@ h3 {
   color: var(--color-accent-hover);
 }
 
-.button-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-height: 2.35rem;
-  border: 1px solid var(--color-accent);
-  border-radius: var(--radius-sm);
-  background: var(--color-accent);
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: 700;
-  padding: 0.5rem 0.9rem;
+.text-link {
+  color: var(--color-accent);
+  font-size: 0.95rem;
+  font-weight: 600;
   text-decoration: none;
-  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
 }
 
-.button-link:hover {
-  background: var(--color-accent-hover);
-  border-color: var(--color-accent-hover);
-  color: #fff;
-  transform: translateY(-1px);
+.text-link:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
 .callout {
@@ -554,6 +547,7 @@ em {
 
   .portrait-wrap {
     position: static;
+    order: -1;
     max-width: 280px;
   }
 
@@ -579,7 +573,6 @@ em {
 
 @media (max-width: 420px) {
   .nav-links a,
-  .button-link,
   .pub-links a {
     width: 100%;
     justify-content: center;
