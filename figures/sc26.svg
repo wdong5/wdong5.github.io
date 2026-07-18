@@ -1,99 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" font-family="Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif">
-  <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 Z" fill="#4d4742"/>
-    </marker>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" font-family="Palatino, 'Palatino Linotype', 'Book Antiqua', Georgia, serif">
+  <rect x="0" y="0" width="900" height="430" fill="#ffffff"/>
 
-  <rect x="0" y="0" width="820" height="420" fill="#ffffff"/>
+  <text x="230" y="30" text-anchor="middle" font-size="18" fill="#1f1f1f" font-weight="700">Pack</text>
+  <text x="670" y="30" text-anchor="middle" font-size="18" fill="#1f1f1f" font-weight="700">Predictor</text>
 
-  <!-- outer loop container -->
-  <rect x="140" y="25" width="640" height="330" rx="14" fill="#fbfaf8" stroke="#ddd6cc" stroke-width="1.5" stroke-dasharray="6 5"/>
-  <text x="460" y="18" text-anchor="middle" font-size="15" fill="#766d65">closed-loop search</text>
-
-  <!-- User Task -->
+  <!-- ===== Panel 1: Pack ===== -->
   <g>
-    <circle cx="70" cy="110" r="32" fill="#fff" stroke="#1f1f1f" stroke-width="1.8"/>
-    <circle cx="70" cy="100" r="9" fill="none" stroke="#1f1f1f" stroke-width="1.8"/>
-    <path d="M54 126c4-11 28-11 32 0" fill="none" stroke="#1f1f1f" stroke-width="1.8" stroke-linecap="round"/>
-    <text x="70" y="158" text-anchor="middle" font-size="16" fill="#1f1f1f" font-weight="700">User Task</text>
+    <!-- rings -->
+    <polygon points="230,80 334.6,156 294.7,279 165.3,279 125.4,156" fill="none" stroke="#ddd6cc" stroke-width="1.2"/>
+    <polygon points="230,116.7 299.8,167.4 273.1,249.3 186.9,249.3 160.2,167.4" fill="none" stroke="#ddd6cc" stroke-width="1"/>
+    <polygon points="230,153.3 264.9,178.7 251.6,219.7 208.4,219.7 195.1,178.7" fill="none" stroke="#ddd6cc" stroke-width="1"/>
+    <!-- spokes -->
+    <path d="M230,190 L230,80 M230,190 L334.6,156 M230,190 L294.7,279 M230,190 L165.3,279 M230,190 L125.4,156" stroke="#ddd6cc" stroke-width="1"/>
+    <!-- baseline (avg of 6 agents) -->
+    <polygon points="230,102 266.6,178.1 275.3,252.3 181.5,256.75 193.4,178.1" fill="#766d65" fill-opacity="0.18" stroke="#766d65" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <!-- SZ-Gen (ours) -->
+    <polygon points="230,85.5 324.1,159.4 289.5,271.9 171.8,270.1 130.6,157.7" fill="#d73f09" fill-opacity="0.28" stroke="#d73f09" stroke-width="2.2"/>
+    <!-- axis labels -->
+    <text x="230" y="55" text-anchor="middle" font-size="13" fill="#766d65">Comp.</text>
+    <text x="360" y="153" text-anchor="start" font-size="13" fill="#766d65">Iter.</text>
+    <text x="310" y="304" text-anchor="middle" font-size="13" fill="#766d65">Exec.</text>
+    <text x="150" y="304" text-anchor="middle" font-size="13" fill="#766d65">Corr.</text>
+    <text x="100" y="153" text-anchor="end" font-size="13" fill="#766d65">TP</text>
   </g>
-  <path d="M102 108 L172 100" stroke="#4d4742" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
-  <circle cx="136" cy="103" r="11" fill="#d73f09"/>
-  <text x="136" y="108" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">1</text>
 
-  <!-- Best Version -->
+  <!-- ===== Panel 2: Predictor ===== -->
   <g>
-    <circle cx="70" cy="290" r="32" fill="#fff" stroke="#1f1f1f" stroke-width="1.8"/>
-    <path d="M58 290a12 12 0 1 1 4 9" fill="none" stroke="#1f1f1f" stroke-width="1.8"/>
-    <path d="M58 290 l-5 -7 M58 290 l8 -2" fill="none" stroke="#1f1f1f" stroke-width="1.8" stroke-linecap="round"/>
-    <text x="70" y="338" text-anchor="middle" font-size="16" fill="#1f1f1f" font-weight="700">Best Version</text>
+    <polygon points="670,80 774.6,156 734.7,279 605.3,279 565.4,156" fill="none" stroke="#ddd6cc" stroke-width="1.2"/>
+    <polygon points="670,116.7 739.8,167.4 713.1,249.3 626.9,249.3 600.2,167.4" fill="none" stroke="#ddd6cc" stroke-width="1"/>
+    <polygon points="670,153.3 704.9,178.7 691.6,219.7 648.4,219.7 635.1,178.7" fill="none" stroke="#ddd6cc" stroke-width="1"/>
+    <path d="M670,190 L670,80 M670,190 L774.6,156 M670,190 L734.7,279 M670,190 L605.3,279 M670,190 L565.4,156" stroke="#ddd6cc" stroke-width="1"/>
+    <!-- baseline -->
+    <polygon points="670,107.5 701.4,179.8 712.1,247.85 624.7,252.3 628.2,176.4" fill="#766d65" fill-opacity="0.18" stroke="#766d65" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <!-- SZ-Gen (ours) -->
+    <polygon points="670,91 758.9,161.1 731.5,274.55 608.5,274.55 581.1,161.1" fill="#d73f09" fill-opacity="0.28" stroke="#d73f09" stroke-width="2.2"/>
+    <text x="670" y="55" text-anchor="middle" font-size="13" fill="#766d65">Comp.</text>
+    <text x="800" y="153" text-anchor="start" font-size="13" fill="#766d65">Iter.</text>
+    <text x="750" y="304" text-anchor="middle" font-size="13" fill="#766d65">Exec.</text>
+    <text x="590" y="304" text-anchor="middle" font-size="13" fill="#766d65">Corr.</text>
+    <text x="540" y="153" text-anchor="end" font-size="13" fill="#766d65">TP</text>
   </g>
-  <path d="M175 285 L102 290" stroke="#4d4742" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
-  <circle cx="136" cy="288" r="11" fill="#d73f09"/>
-  <text x="136" y="293" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">6</text>
-
-  <!-- Controller -->
-  <rect x="175" y="65" width="160" height="70" rx="8" fill="#d73f09"/>
-  <text x="255" y="106" text-anchor="middle" font-size="18" fill="#fff" font-weight="700">Controller</text>
-
-  <!-- Coder -->
-  <rect x="485" y="65" width="160" height="70" rx="8" fill="#d73f09"/>
-  <text x="565" y="106" text-anchor="middle" font-size="18" fill="#fff" font-weight="700">Coder</text>
-
-  <!-- Profiler -->
-  <rect x="485" y="250" width="160" height="70" rx="8" fill="#d73f09"/>
-  <text x="565" y="291" text-anchor="middle" font-size="18" fill="#fff" font-weight="700">Profiler</text>
-
-  <!-- Validator -->
-  <rect x="175" y="250" width="160" height="70" rx="8" fill="#d73f09"/>
-  <text x="255" y="291" text-anchor="middle" font-size="18" fill="#fff" font-weight="700">Validator</text>
-
-  <!-- GlobalState / Sandbox -->
-  <rect x="350" y="155" width="120" height="64" rx="8" fill="#fff6f0" stroke="#d73f09" stroke-width="1.5" stroke-dasharray="5 4"/>
-  <text x="410" y="182" text-anchor="middle" font-size="14" fill="#1f1f1f" font-weight="700">GlobalState</text>
-  <text x="410" y="201" text-anchor="middle" font-size="14" fill="#1f1f1f" font-weight="700">/ Sandbox</text>
-
-  <!-- Controller -> Coder : Strategies (2) -->
-  <path d="M335 100 L482 100" stroke="#4d4742" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
-  <circle cx="410" cy="100" r="11" fill="#d73f09"/>
-  <text x="410" y="105" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">2</text>
-  <text x="410" y="82" text-anchor="middle" font-size="13" fill="#766d65">strategies</text>
-
-  <!-- Coder -> Profiler : Code (3) -->
-  <path d="M565 135 L565 247" stroke="#4d4742" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
-  <circle cx="565" cy="191" r="11" fill="#d73f09"/>
-  <text x="565" y="196" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">3</text>
-  <text x="600" y="196" text-anchor="middle" font-size="13" fill="#766d65">code</text>
-
-  <!-- Profiler -> Validator : hardware utilization (4) -->
-  <path d="M482 285 L338 285" stroke="#4d4742" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
-  <circle cx="410" cy="285" r="11" fill="#d73f09"/>
-  <text x="410" y="290" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">4</text>
-  <text x="410" y="336" text-anchor="middle" font-size="13" fill="#766d65">hardware utilization</text>
-
-  <!-- Validator -> Controller : validated metrics (5) -->
-  <path d="M255 247 L255 138" stroke="#4d4742" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
-  <circle cx="255" cy="191" r="11" fill="#d73f09"/>
-  <text x="255" y="196" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">5</text>
-  <text x="300" y="176" text-anchor="start" font-size="13" fill="#766d65">validated</text>
-  <text x="300" y="192" text-anchor="start" font-size="13" fill="#766d65">metrics</text>
-
-  <!-- dotted links to GlobalState -->
-  <path d="M335 130 L350 155" stroke="#d73f09" stroke-width="1.2" fill="none" stroke-dasharray="3 3"/>
-  <path d="M485 130 L470 155" stroke="#d73f09" stroke-width="1.2" fill="none" stroke-dasharray="3 3"/>
-  <path d="M485 250 L470 219" stroke="#d73f09" stroke-width="1.2" fill="none" stroke-dasharray="3 3"/>
-  <path d="M335 250 L350 219" stroke="#d73f09" stroke-width="1.2" fill="none" stroke-dasharray="3 3"/>
 
   <!-- legend -->
-  <text x="460" y="382" text-anchor="middle" font-size="13" fill="#1f1f1f">
-    <tspan font-weight="700" fill="#d73f09">1</tspan> Task init.&#160;&#160;
-    <tspan font-weight="700" fill="#d73f09">2</tspan> Strategy gen.&#160;&#160;
-    <tspan font-weight="700" fill="#d73f09">3</tspan> Code gen.&#160;&#160;
-    <tspan font-weight="700" fill="#d73f09">4</tspan> Profiling
-  </text>
-  <text x="460" y="403" text-anchor="middle" font-size="13" fill="#1f1f1f">
-    <tspan font-weight="700" fill="#d73f09">5</tspan> Validation &amp; feedback&#160;&#160;
-    <tspan font-weight="700" fill="#d73f09">6</tspan> Iteration &amp; termination
-  </text>
+  <g>
+    <rect x="300" y="385" width="22" height="14" rx="3" fill="#d73f09" fill-opacity="0.28" stroke="#d73f09" stroke-width="2"/>
+    <text x="330" y="397" font-size="14" fill="#1f1f1f" font-weight="700">SZ-Gen (ours)</text>
+    <rect x="500" y="385" width="22" height="14" rx="3" fill="#766d65" fill-opacity="0.18" stroke="#766d65" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="530" y="397" font-size="14" fill="#766d65">Baseline agents</text>
+  </g>
 </svg>
