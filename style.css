@@ -444,7 +444,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 2 / 1;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   background: var(--color-surface);
@@ -631,7 +631,7 @@ em {
   }
 
   .pub-thumb {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 2 / 1;
     max-width: 320px;
     margin-bottom: var(--space-2);
   }
