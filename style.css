@@ -208,13 +208,24 @@ h3 {
   flex-shrink: 0;
 }
 
+.profile-side {
+  min-width: 0;
+}
+
+.profile-side .link-row {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: var(--space-3) 0 0;
+}
+
 .portrait {
   display: block;
   width: 100%;
   max-width: 260px;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   box-shadow: 0 1px 4px rgba(31, 31, 31, 0.1);
@@ -455,6 +466,12 @@ h3 {
   font-weight: 700;
 }
 
+.acceptance-rate {
+  color: var(--color-muted);
+  font-size: 0.92em;
+  white-space: nowrap;
+}
+
 .publication {
   display: grid;
   grid-template-columns: 300px minmax(0, 1fr);
@@ -652,9 +669,9 @@ em {
     grid-template-columns: 1fr;
   }
 
-  .portrait-wrap {
+  .profile-side {
     order: -1;
-    max-width: 190px;
+    max-width: 220px;
   }
 
   .news-list li {
