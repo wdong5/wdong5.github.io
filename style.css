@@ -197,10 +197,10 @@ h3 {
 
 .hero-body {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(180px, 240px);
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 260px);
   gap: clamp(1.4rem, 3vw, 2.4rem);
   align-items: start;
-  margin-top: var(--space-4);
+  margin-top: var(--space-3);
 }
 
 .portrait-wrap {
@@ -211,7 +211,7 @@ h3 {
 .portrait {
   display: block;
   width: 100%;
-  max-width: 240px;
+  max-width: 260px;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center 18%;
