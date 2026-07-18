@@ -482,6 +482,7 @@ h3 {
 }
 
 .authors {
+  max-width: none;
   color: var(--color-muted);
   font-size: 0.95rem;
 }
