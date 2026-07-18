@@ -498,6 +498,7 @@ h3 {
 }
 
 .description {
+  max-width: none;
   color: var(--color-text-secondary);
   font-size: 0.96rem;
   line-height: 1.5;
