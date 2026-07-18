@@ -487,6 +487,7 @@ h3 {
 }
 
 .venue {
+  max-width: none;
   color: var(--color-muted);
   font-size: 0.88rem;
 }
