@@ -267,6 +267,33 @@ h3 {
   line-height: 1.4;
 }
 
+.pronunciation-button {
+  appearance: none;
+  border: 0;
+  border-bottom: 1px solid var(--color-muted);
+  background: transparent;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.pronunciation-button:hover {
+  border-bottom-color: var(--color-text);
+  color: var(--color-text);
+}
+
+.pronunciation-button:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.pronunciation-button:disabled {
+  cursor: default;
+  opacity: 0.65;
+}
+
 .pronunciation-icon {
   font-size: 0.9em;
 }
@@ -687,6 +714,20 @@ em {
   background: var(--color-muted);
 }
 
+#ser h2 {
+  border-left-color: var(--color-muted);
+}
+
+#ser a {
+  color: inherit;
+  text-decoration-color: var(--color-muted);
+}
+
+#ser a:hover {
+  color: var(--color-text);
+  text-decoration-color: var(--color-text);
+}
+
 .sponsors {
   margin-top: var(--space-4);
   border-top: 1px solid var(--color-border);
@@ -728,8 +769,13 @@ em {
   object-fit: contain;
 }
 
+.sponsor-doe {
+  justify-content: center;
+}
+
 .sponsor-doe img {
-  transform: scale(1.3);
+  flex-basis: 9rem;
+  width: 9rem;
 }
 
 .site-footer {

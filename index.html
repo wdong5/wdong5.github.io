@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Wenqian Dong | Assistant Professor, Oregon State University">
   <meta name="twitter:description" content="High-performance computing, scientific machine learning, automatic performance tuning, and system-level optimization for large-scale ML models.">
-  <link rel="stylesheet" href="style.css?v=20260719-29">
+  <link rel="stylesheet" href="style.css?v=20260719-32">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -67,7 +67,7 @@
         <div class="hero-id">
           <p class="eyebrow">Assistant Professor</p>
           <h1 id="name">Wenqian Dong</h1>
-          <p class="name-pronunciation">Dong, Wenqian (董 文倩) <span aria-hidden="true">&middot;</span> pronounced “Dong Wen-chyen” <span class="pronunciation-icon" aria-hidden="true">🔊</span></p>
+          <p class="name-pronunciation">Dong, Wenqian (董 文倩) <span aria-hidden="true">&middot;</span> pronounced <button class="pronunciation-button" type="button" data-pronunciation="Dong Wen-chyen" aria-label="Play pronunciation: Dong Wen-chyen">“Dong Wen-chyen” <span class="pronunciation-icon" aria-hidden="true">🔊</span></button>, or Wendy</p>
           <p class="subtitle">School of EECS, <a href="https://engineering.oregonstate.edu/EECS">Oregon State University</a> (from Fall 2024)</p>
         </div>
       </div>
@@ -167,10 +167,6 @@
         <li><strong>2023:</strong> NSF ExpandAI, “An AI/ML Collaborative for Southeast Florida Coastal Environmental Data and Modeling Center” (Role: Senior Personnel)</li>
         <li><strong>2023:</strong> IEEE CS TCHPC Early Career Researchers Award for Excellence in High Performance Computing</li>
         <li><strong>2020:</strong> Bobcat Fellowship at UC Merced</li>
-        <li><strong>2019:</strong> ASPLOS'19 Student Travel Grant</li>
-        <li><strong>2018:</strong> Bobcat Fellowship at UC Merced</li>
-        <li><strong>2016:</strong> China National Scholarship for Graduate Students</li>
-        <li><strong>2014:</strong> China National Scholarship for Undergraduate Students</li>
       </ul>
     </section>
 
@@ -233,8 +229,7 @@
         <span>U.S. National Science Foundation</span>
       </a>
       <a class="sponsor sponsor-doe" href="https://www.energy.gov/">
-        <img src="https://www.energy.gov/themes/custom/energy_gov/img/logo-image.png" alt="" width="56" height="56" loading="lazy">
-        <span>U.S. Department of Energy</span>
+        <img src="https://www.energy.gov/themes/custom/energy_gov/img/logo-image.png" alt="U.S. Department of Energy" width="144" height="56" loading="lazy">
       </a>
       <a class="sponsor" href="https://www.anl.gov/">
         <img src="https://www.anl.gov/sites/www/themes/custom/anl_public_theme/favicon.ico" alt="" width="56" height="56" loading="lazy">
@@ -246,5 +241,21 @@
   <footer class="site-footer">
     <p>&copy; Wenqian Dong <span aria-hidden="true">&middot;</span> Go Beavs! <span role="img" aria-label="Beaver">🦫</span> <span aria-hidden="true">&middot;</span> Last updated: <time datetime="2026-07-19">July 19, 2026</time></p>
   </footer>
+  <script>
+    const pronunciationButton = document.querySelector('.pronunciation-button');
+
+    if (pronunciationButton && 'speechSynthesis' in window) {
+      pronunciationButton.addEventListener('click', () => {
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(pronunciationButton.dataset.pronunciation);
+        utterance.lang = 'en-US';
+        utterance.rate = 0.8;
+        window.speechSynthesis.speak(utterance);
+      });
+    } else if (pronunciationButton) {
+      pronunciationButton.disabled = true;
+      pronunciationButton.title = 'Audio pronunciation is not supported by this browser.';
+    }
+  </script>
 </body>
 </html>
