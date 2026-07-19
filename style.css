@@ -122,6 +122,7 @@ h3 {
 
 .site-nav,
 .page-shell,
+.sponsors,
 .site-footer {
   width: min(var(--max-width), 100% - clamp(1rem, 4vw, 3rem));
   margin-inline: auto;
@@ -660,6 +661,47 @@ em {
   background: var(--color-muted);
 }
 
+.sponsors {
+  margin-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-5);
+}
+
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.sponsor {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3);
+  color: var(--color-text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.sponsor:hover {
+  border-color: var(--color-accent);
+  background: var(--color-surface-warm);
+  color: var(--color-text);
+}
+
+.sponsor img {
+  flex: 0 0 3.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+}
+
 .site-footer {
   margin-top: var(--space-6);
   border-top: 1px solid var(--color-border);
@@ -669,6 +711,10 @@ em {
 }
 
 @media (max-width: 800px) {
+  .sponsor-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .site-nav {
     align-items: flex-start;
     flex-direction: column;
