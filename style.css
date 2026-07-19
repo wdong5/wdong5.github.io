@@ -178,6 +178,14 @@ h3 {
   color: var(--color-text);
 }
 
+.nav-links .nav-picomp {
+  color: var(--color-accent);
+}
+
+.nav-links .nav-picomp:hover {
+  color: var(--color-accent-hover);
+}
+
 .page-shell {
   position: relative;
   padding-block: var(--space-5) var(--space-6);
@@ -262,6 +270,16 @@ h3 {
   color: var(--color-text-secondary);
   font-size: 1rem;
   line-height: 1.62;
+}
+
+.hero-content a {
+  color: inherit;
+  text-decoration-color: var(--color-muted);
+}
+
+.hero-content a:hover {
+  color: var(--color-text);
+  text-decoration-color: var(--color-text);
 }
 
 .link-row {
