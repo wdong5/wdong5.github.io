@@ -403,6 +403,20 @@ h3 {
   list-style: none;
 }
 
+.news-list {
+  font-size: calc(1em - 1pt);
+}
+
+.news-list a {
+  color: inherit;
+  text-decoration-color: var(--color-muted);
+}
+
+.news-list a:hover {
+  color: var(--color-text);
+  text-decoration-color: var(--color-text);
+}
+
 .news-list li {
   display: grid;
   grid-template-columns: 6rem minmax(0, 1fr);
